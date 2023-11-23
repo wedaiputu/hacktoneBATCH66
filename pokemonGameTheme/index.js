@@ -1,6 +1,11 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+localStorage.setItem("level",1)
+localStorage.setItem("score", 0)
+
+console.log("test loval");
+
 canvas.width = 996
 canvas.height = 576
 
