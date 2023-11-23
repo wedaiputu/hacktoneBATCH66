@@ -1,7 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1024
+canvas.width = 996
 canvas.height = 576
 
 const collisionsMap = []
@@ -271,7 +271,7 @@ function animate() {
     }
   }
 
-  if (keys.w.pressed && lastKey === 'w') {
+  if (keys.w.pressed && lastKey === 'w' || keys.w.pressed && lastKey === 'W') {
     player.animate = true
     player.image = player.sprites.up
 
@@ -304,7 +304,7 @@ function animate() {
       movables.forEach((movable) => {
         movable.position.y += 3
       })
-  } else if (keys.a.pressed && lastKey === 'a') {
+  } else if (keys.a.pressed && lastKey === 'a' || keys.a.pressed && lastKey === 'A') {
     player.animate = true
     player.image = player.sprites.left
 
@@ -337,7 +337,7 @@ function animate() {
       movables.forEach((movable) => {
         movable.position.x += 3
       })
-  } else if (keys.s.pressed && lastKey === 's') {
+  } else if (keys.s.pressed && lastKey === 's' || keys.s.pressed && lastKey === 'S' || keys.s.pressed && lastKey === 'keypad') {
     player.animate = true
     player.image = player.sprites.down
 
@@ -370,7 +370,7 @@ function animate() {
       movables.forEach((movable) => {
         movable.position.y -= 3
       })
-  } else if (keys.d.pressed && lastKey === 'd') {
+  } else if (keys.d.pressed && lastKey === 'd' || keys.d.pressed && lastKey === 'D') {
     player.animate = true
     player.image = player.sprites.right
 
@@ -445,20 +445,37 @@ window.addEventListener('keydown', (e) => {
       keys.w.pressed = true
       lastKey = 'w'
       break
+    case 'W':
+      keys.w.pressed = true
+      lastKey = 'W'
+      break 
     case 'a':
       keys.a.pressed = true
       lastKey = 'a'
       break
 
+    case 'A':
+      keys.a.pressed = true
+      lastKey = 'A'
+      break  
+
     case 's':
       keys.s.pressed = true
       lastKey = 's'
+      break
+    case 'S':
+      keys.s.pressed = true
+      lastKey = 'S'
       break
 
     case 'd':
       keys.d.pressed = true
       lastKey = 'd'
       break
+    case 'D':
+      keys.d.pressed = true
+      lastKey = 'D'
+      break  
   }
 })
 
@@ -474,6 +491,19 @@ window.addEventListener('keyup', (e) => {
       keys.s.pressed = false
       break
     case 'd':
+      keys.d.pressed = false
+      break
+
+    case 'W':
+      keys.w.pressed = false
+      break
+    case 'A':
+      keys.a.pressed = false
+      break
+    case 'S':
+      keys.s.pressed = false
+      break
+    case 'D':
       keys.d.pressed = false
       break
   }

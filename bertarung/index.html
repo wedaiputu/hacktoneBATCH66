@@ -14,6 +14,11 @@
         box-sizing: border-box;
         font-family: 'Press Start 2P', cursive;
       }
+      canvas {
+        width: 99vw;
+        height: 87vh;
+        display: block;
+      }
     </style>
   </head>
 </head>
@@ -21,6 +26,12 @@
   <h1>
     <a href="/homepage.html">HOME</a>
   </h1>
+  <div style="position: absolute; top: 20px; left: 150px; color: black;">
+    Player Score: <span id="playerScore">0</span>
+  </div>
+  <div style="position: absolute; top: 20px; right: 150px; color: black;">
+    Enemy Score: <span id="enemyScore">0</span>
+  </div>
   <!-- red container div -->
   <div style="position: relative; display: inline-block">
     <!-- smaller red container div -->

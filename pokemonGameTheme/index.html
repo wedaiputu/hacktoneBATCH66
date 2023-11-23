@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://github.com/wedaiputu/hacktoneBATCH66">
+    <link rel="stylesheet" href="homepage2.css">
     <style>
       * {
         font-family: 'Press Start 2P', cursive;
@@ -16,7 +17,7 @@
       }
   
       body {
-        background-color: rgb(253, 249, 249);
+        background-color: rgb(229, 195, 147);
       }
   
       h1 {
@@ -32,12 +33,21 @@
       button:hover {
         background-color: #ddd;
       }
+      
+      canvas {
+        width: 99vw;
+        height: 84vh;
+        display: block;
+      }
     </style>
   </head>
 <body>
-  <div style="justify-content: right">SCORE </div>
+  <div style="justify-content: right">SCORE <span id="score">0</span>
+  <a href="/pokemonGameTheme/index.html">RESET</a>
+  </div>
+  
   <h2>
-    <a href="/homepage.html">HOME</a>
+    <a href="/homepage/homepage2.html">HOME</a>
   </h2>
   <div style="display: inline-block; position: relative">
     <div
@@ -206,6 +216,10 @@
   <script src="classes.js"></script>
   <script src="index.js"></script>
   <script src="battleScene.js"></script>
+  
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+  <script>bubbly();</script> -->
+
 </body>
 </html>
 

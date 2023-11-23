@@ -234,3 +234,21 @@ text-align: center;
     height: 200px;
 }
   
+/* .game-box {
+    border: solid black 3px;
+    width: auto;
+    margin: 5px; 
+    display: inline-block; 
+    text-align: center; 
+    padding: 10px; 
+    text-decoration: none; 
+    color: black;
+    background: linear-gradient(to bottom, #ffff, #beb2b2);
+}
+
+.game-box a {
+    display: block;
+    text-decoration: none; 
+    color: rgb(254, 250, 250); 
+    
+} */
