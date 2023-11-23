@@ -14,6 +14,7 @@ let renderedSprites
 let battleAnimationId
 let queue
 
+
 function initBattle() {
   document.querySelector('#userInterface').style.display = 'block'
   document.querySelector('#dialogueBox').style.display = 'none'
@@ -105,7 +106,17 @@ function initBattle() {
       })
 
       console.log(emby, 'INI EMBY')
+      if(emby.score >= 30 ) {
+        emby.level += 1
+        // emby.score = 0
+        // console.log('masuk');
+        localStorage.level++ 
+        // localStorage.setItem("position", emby.level)
+
+
+      }
       document.getElementById("score").innerHTML = Number(emby.score)
+      document.getElementById("level").innerHTML = Number(localStorage.level)
       console.log(emby.score,'<<<');
 
     })
