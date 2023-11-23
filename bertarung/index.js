@@ -1,7 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1024
+canvas.width = 904
 canvas.height = 576
 let playerScore = 0;
 let enemyScore = 0;
@@ -15,7 +15,8 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/background.png'
+  imageSrc: './img/arena1.png'
+  // imageSrc: './img/background.png'
 })
 
 const shop = new Sprite({
@@ -23,7 +24,7 @@ const shop = new Sprite({
     x: 600,
     y: 128
   },
-  imageSrc: './img/shop.png',
+  imageSrc: './img/stars.png',
   scale: 2.75,
   framesMax: 6
 })

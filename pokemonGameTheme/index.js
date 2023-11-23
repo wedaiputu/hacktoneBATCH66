@@ -6,7 +6,7 @@ localStorage.setItem("score", 0)
 
 console.log("test loval");
 
-canvas.width = 996
+canvas.width = 1006
 canvas.height = 576
 
 const collisionsMap = []
