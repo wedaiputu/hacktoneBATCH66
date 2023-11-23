@@ -3,6 +3,8 @@ const c = canvas.getContext('2d')
 
 canvas.width = 1024
 canvas.height = 576
+let playerScore = 0;
+let enemyScore = 0;
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -265,6 +267,14 @@ function animate() {
   if (enemy.health <= 0 || player.health <= 0) {
     determineWinner({ player, enemy, timerId })
   }
+  if (enemy.health <= 0) {
+    playerScore++;
+    document.getElementById('playerScore').innerText = playerScore;
+  } else if (player.health <= 0) {
+    enemyScore++;
+    document.getElementById('enemyScore').innerText = enemyScore;
+  }
+
 }
 
 animate()
