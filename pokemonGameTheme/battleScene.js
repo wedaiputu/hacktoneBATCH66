@@ -65,6 +65,7 @@ function initBattle() {
           })
         })
       }
+      
 
       // draggle or enemy attacks right here
       const randomAttack =
@@ -102,6 +103,11 @@ function initBattle() {
           })
         }
       })
+
+      console.log(emby, 'INI EMBY')
+      document.getElementById("score").innerHTML = Number(emby.score)
+      console.log(emby.score,'<<<');
+
     })
 
     button.addEventListener('mouseenter', (e) => {
@@ -116,7 +122,7 @@ function animateBattle() {
   battleAnimationId = window.requestAnimationFrame(animateBattle)
   battleBackground.draw()
 
-  console.log(battleAnimationId)
+  // console.log(battleAnimationId)
 
   renderedSprites.forEach((sprite) => {
     sprite.draw()
@@ -133,3 +139,5 @@ document.querySelector('#dialogueBox').addEventListener('click', (e) => {
     queue.shift()
   } else e.currentTarget.style.display = 'none'
 })
+
+//

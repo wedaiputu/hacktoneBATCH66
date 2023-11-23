@@ -95,7 +95,9 @@ class Monster extends Sprite {
     rotation = 0,
     isEnemy = false,
     name,
-    attacks
+    attacks,
+    score = 0
+    
   }) {
     super({
       position,
@@ -110,6 +112,7 @@ class Monster extends Sprite {
     this.isEnemy = isEnemy
     this.name = name
     this.attacks = attacks
+    this.score = score
   }
 
   faint() {
@@ -183,7 +186,7 @@ class Monster extends Sprite {
             renderedSprites.splice(1, 1)
           }
         })
-
+        this.score += 10
         break
       case 'Tackle':
         const tl = gsap.timeline()
@@ -222,6 +225,7 @@ class Monster extends Sprite {
           .to(this.position, {
             x: this.position.x
           })
+          this.score += 20
         break
     }
   }
